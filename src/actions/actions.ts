@@ -1,14 +1,14 @@
-"use server";
+// "use server";
 
-import { prisma } from "@/lib/db";
-import { revalidatePath } from "next/cache";
+// import { prisma } from "@/lib/prisma";
+// import { revalidatePath } from "next/cache";
 
-export async function addTask(formData: FormData) {
-  await prisma.task.create({
-    data: {
-      title: formData.get("title") as string,
-    },
-  })
+// export async function addTask(formData: FormData) {
+//   await prisma.task.create({
+//     data: {
+//       title: formData.get("title") as string,
+//     },
+//   })
 
-  revalidatePath("/");
-}
+//   revalidatePath("/");
+// }
