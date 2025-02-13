@@ -20,6 +20,7 @@ export default async function Navbar() {
           <div className='flex gap-2 items-center text-sm'>
             <p>{session.user?.name}</p>
             <button onClick={handleSignOut}>Sign out</button>
+            <Link href="/dashboard"><p>Dashboard</p></Link>
           </div>
         ) : (
           <div className='flex gap-2 items-center text-sm'>

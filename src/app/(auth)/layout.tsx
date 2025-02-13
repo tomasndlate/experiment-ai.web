@@ -5,7 +5,7 @@ export default async function AuthLayout({children}: Readonly<{children: React.R
 
   // if user log in, redirect to home page
   const session = await auth();
-  if (session) redirect("/");
+  if (session) redirect("/dashboard");
 
   return (
     <main className="

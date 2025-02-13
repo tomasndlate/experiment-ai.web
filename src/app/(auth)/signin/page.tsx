@@ -20,12 +20,12 @@ export default function SignIn() {
                 <span>Continue with GitHub</span>
               </button>
             </form>
-            <form action="">
+            {/* <form action="">
               <button type="submit" className="w-full h-fit p-4 flex items-center justify-center gap-4 bg-sky-800 text-white rounded-md">
                 <FaGoogle className="text-xl"/>
                 <span>Continue with Google</span>
               </button>
-            </form>
+            </form> */}
           </div>
 
           <div className="flex justify-center items-center gap-4">
@@ -34,13 +34,13 @@ export default function SignIn() {
             <hr className="h-0.5 w-full bg-zinc-700" />
           </div>
 
-          <form action="" className="flex flex-col gap-2">
+          {/* <form action="" className="flex flex-col gap-2">
             <input type="text" name="email" placeholder="Email" className="w-full h-fit p-4 rounded-md bg-transparent border border-1 border-zinc-400"/>
             <input type="password" name="password" placeholder="Password" className="w-full h-fit p-4 rounded-md bg-transparent border border-1 border-zinc-400"/>
             <button type="submit" className="w-full h-fit p-4 flex items-center justify-center gap-4 bg-zinc-950 text-white rounded-md">
               <span>Sign In</span>
             </button>
-          </form>
+          </form> */}
         </section>
     </div>
   )
