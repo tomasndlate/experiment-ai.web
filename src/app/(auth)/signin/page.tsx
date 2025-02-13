@@ -1,5 +1,5 @@
 import { signIn } from "@/lib/auth";
-import { FaGithub, FaGoogle } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 export default function SignIn() {
 
