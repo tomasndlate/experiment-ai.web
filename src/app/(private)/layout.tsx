@@ -2,10 +2,12 @@ import { auth } from '@/lib/auth';
 import { redirect } from 'next/navigation';
 import React from 'react'
 import Image from 'next/image';
+import { getUserbyId } from '@/services/user-service';
 
 export default async function PrivateLayout({children}: Readonly<{children: React.ReactNode}>) {
     const session = await auth();
-    if (!session) redirect('/');
+    if (!session?.user?.id) redirect('/');
+    const user = await getUserbyId(session.user.id);
   return (
     <>
     <header>
@@ -20,9 +22,9 @@ export default async function PrivateLayout({children}: Readonly<{children: Reac
 
           <section className='flex items-center gap-3'>
             <div className='flex flex-col items-end'>
-              <p className='text-sm'>{session?.user?.name}</p>
+              <p className='text-sm'>{user?.name}</p>
               {/* <p>{session?.user?.credits} credits</p> */}
-              <p className='text-xs text-gray-600'>12 credits</p>
+              <p className='text-xs text-gray-600'>{user?.credits} credits</p>
             </div>
             <div className='w-9 h-9 rounded-full overflow-hidden cursor-pointer'>
               {session.user?.image 
