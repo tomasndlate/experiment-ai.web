@@ -2,7 +2,7 @@
 import { loadStripe } from '@stripe/stripe-js';
 import { buyCredits } from './actions';
 
-const stripePromise = loadStripe(process.env.STRIPE_PUBLISHABLE_KEY!);
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
 
 export default function CreditsCard({ price }: { price: 50 | 100 | 250 }) {
 
