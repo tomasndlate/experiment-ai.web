@@ -34,8 +34,8 @@ export async function buyCredits(credits: number) {
                 quantity: 1
             }
         ],
-        success_url: `${process.env.NEXT_PUBLIC_}/dashboard/models`,
-        cancel_url: `${process.env.NEXT_PUBLIC_}/dashboard/credits`
+        success_url: `${process.env.BASE_URL}/dashboard/models`,
+        cancel_url: `${process.env.BASE_URL}/dashboard/credits`
     });
 
     return s.id;
