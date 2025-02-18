@@ -11,7 +11,7 @@ export async function buyCredits(credits: number) {
 
     const creditsIds: Record<number, string> = {
         50: process.env.STRIPE_CREDITS_50!,
-        100: process.env.STRIPE_CREDITS_100!,
+        120: process.env.STRIPE_CREDITS_100!,
         250: process.env.STRIPE_CREDITS_250!,
     }
 

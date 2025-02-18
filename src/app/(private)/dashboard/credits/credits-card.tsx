@@ -4,12 +4,12 @@ import { buyCredits } from './actions';
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
 
-export default function CreditsCard({ price }: { price: 50 | 100 | 250 }) {
+export default function CreditsCard({ price }: { price: 50 | 120 | 250 }) {
 
   const creditsPlans: Record<number, {cash: number, name: string, description: string}> = {
-    50: {cash: 2, name: 'Hello, World!', description: 'Basic package to get started'},
-    100: {cash: 4, name: 'Making It Rain', description: 'Get more credits to enjoy more experiments'},
-    250: {cash: 10, name: 'Jeff Bezos Mode', description: 'Get the most credits to enjoy the most experiments'},
+    50: {cash: 1, name: 'Hello, World!', description: 'Basic package to get started'},
+    120: {cash: 2, name: 'Making It Rain', description: 'Get more credits to enjoy more experiments'},
+    250: {cash: 3, name: 'Jeff Bezos Mode', description: 'Get the most credits to enjoy the most experiments'},
   }
   const plan = creditsPlans[price];
 
