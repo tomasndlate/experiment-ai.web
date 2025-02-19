@@ -12,8 +12,8 @@ export default async function CreditsPage() {
   return (
     <div className='w-full h-full p-6 max-w-screen-2xl m-auto flex flex-col gap-6'>
       <section>
-        <h1 className='text-xl font-semibold'>Choose the best Credits Package for you</h1>
-        <p className='text-md'>Try out the basic package with one time payment. Get more credits to enjoy more experimens.</p>
+        <h1 className='text-xl font-semibold'>Select Your Ideal Credits Package</h1>
+        <p className='text-md'>One-time payment to get more credits for your experiments.</p>
       </section>
       <section className='
         w-full h-96 grid grid-cols-1 gap-4

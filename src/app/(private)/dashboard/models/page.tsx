@@ -1,3 +1,4 @@
+import { ai_models } from '@/lib/ai-models';
 import { auth } from '@/lib/auth';
 import { getUserbyId } from '@/services/user-service';
 import Link from 'next/link';
@@ -8,19 +9,6 @@ export default async function ModelsPage() {
     const session = await auth();
     if (!session?.user?.id) redirect('/');
     const user = await getUserbyId(session.user.id);
-
-    const models = [
-        {
-            id: 'model-1',
-            name: 'Model 1',
-            description: 'This is a description for model 1',
-        },
-        {
-            id: 'model-2',
-            name: 'Model 2',
-            description: 'This is a description for model 2',
-        }
-    ];
 
   return (
     <div className='w-full h-full p-6 max-w-screen-2xl m-auto flex flex-col gap-6'>
@@ -47,13 +35,13 @@ export default async function ModelsPage() {
             <div className='
             w-full h-fit grid grid-cols-1 gap-4
             md:grid-cols-2'>
-                {models.map(model => (
-                    <div key={model.id} className='w-full h-fit p-6 flex flex-col gap-4 bg-white rounded-md shadow-lg'>
+                {Object.keys(ai_models).map(slug => (
+                    <div key={slug} className='w-full h-fit p-6 flex flex-col gap-4 bg-white rounded-md shadow-lg'>
                         <div>
-                            <h4 className='text-lg font-semibold'>{model.name}</h4>
-                            <p>{model.description}</p>
+                            <h4 className='text-lg font-semibold'>{ai_models[slug].name}</h4>
+                            <p>{ai_models[slug].description}</p>
                         </div>
-                        <button className='w-fit h-fit self-end px-6 py-1 text-sm rounded-full text-white bg-zinc-950'>Experiment</button>
+                        <Link href={`models/${slug}`} className='w-fit h-fit self-end px-6 py-1 text-sm rounded-full text-white bg-zinc-950'>Experiment</Link>
                     </div>
                 ))}
             </div>

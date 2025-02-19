@@ -1,4 +1,4 @@
-import { auth } from '@/lib/auth';
+import { auth, signOut } from '@/lib/auth';
 import { redirect } from 'next/navigation';
 import React from 'react'
 import Image from 'next/image';
@@ -8,6 +8,12 @@ export default async function PrivateLayout({children}: Readonly<{children: Reac
     const session = await auth();
     if (!session?.user?.id) redirect('/');
     const user = await getUserbyId(session.user.id);
+
+    const handleSignOut = async () => {
+      "use server";
+      await signOut();
+    }
+
   return (
     <>
     <header>
@@ -19,6 +25,8 @@ export default async function PrivateLayout({children}: Readonly<{children: Reac
               <span className="inline-block md:hidden">MLS Models</span>
             </h1>
           </section>
+
+          <p className='cursor-pointer' onClick={handleSignOut}>logout</p>
 
           <section className='flex items-center gap-3'>
             <div className='flex flex-col items-end'>
