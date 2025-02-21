@@ -1,7 +1,9 @@
 <!-- PROJECT LOGO -->
 <div align="center">
   <a href="https://ml-experiment-ai.vercel.app/">
-    <img src="public/ml-spam-detector.ico" alt="Experiment.AI logo" width="80" height="80">
+    <img src="public/images/icon.png" alt="Experiment.AI logo" width="80" height="80">
+    ![dialogflow-svgrepo-com](https://github.com/user-attachments/assets/7ccebf1b-8ba0-4e0c-bef8-07b3456f5eb2)
+
   </a>
 
   <h1 align="center">Experiment.AI</h1>
