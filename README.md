@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<!-- PROJECT LOGO -->
+<div align="center">
+  <a href="https://ml-experiment-ai.vercel.app/">
+    <img src="public/ml-spam-detector.ico" alt="Experiment.AI logo" width="80" height="80">
+  </a>
 
-## Getting Started
+  <h1 align="center">Experiment.AI</h1>
 
-First, run the development server:
+  <p align="center">
+     A full-stack machine learning application to interact with multiple models
+    <br />
+    <br />
+    <a href="https://ml-experiment-ai.vercel.app/"><strong>Explore Experiment.AI live »</strong></a>
+    <br />
+  </p>
+</div>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<img width="1667" alt="ml-experiment-ai" src="https://github.com/user-attachments/assets/72b4cfe7-d6b0-45a7-88d6-a3dc0b635918" />
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Overview
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Experiment.AI is a full-stack application that allows users to interact with AI models in real time. The platform integrates a web client, AI models, authentication, and payment processing. It features:
 
-## Learn More
+**Client**: A Next.js-based frontend hosted on Vercel.
 
-To learn more about Next.js, take a look at the following resources:
+**Backend**: Serverless API deployed on AWS Lambda and API Gateway.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**AI Models**: Deployed as serverless functions using Python.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Database**: PostgreSQL for user and transaction management.
 
-## Deploy on Vercel
+**Authentication**: Secure login and user management via Auth.js.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Payments**: Stripe integration for one-time payment and credit-based access.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Features
+
+**AI Model Interaction**: *Users can query and interact with different AI models.*
+
+**Serverless Deployment**: *Backend and models are hosted on AWS Lambda for scalability.*
+
+**Secure Authentication**: *Users can sign in with credentials and OAuth providers using Auth.js.*
+
+**Payments & Subscription**: *Integrated with Stripe to support one-time payments.*
+
+
+## Technologies Used
+
+#### Frontend (Client)
+
+- Next.js (React framework)
+- Tailwind CSS
+- Hosted on Vercel
+
+#### Backend (API)
+
+- AWS Lambda (Docker-based)
+- AWS API Gateway
+- PostgreSQL (database)
+- Stripe for payments
+- Auth.js for authentication
+
+#### Machine Learning (AI Models)
+
+- Python & Scikit-learn for AI models
+- Serverless deployment with AWS Lambda
+- Pickle for model serialization
+  
+
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+This project is licensed under the MIT License. You are free to use, modify, and distribute this software under the terms of the MIT License.
+
+## Contact
+
+For any inquiries, suggestions, or feedback, feel free to reach out:
+
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tomasndlate/)
+[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https:/github.com/tomasndlate)
