@@ -4,6 +4,7 @@ import { auth } from "@/lib/auth";
 import { stripe } from "@/lib/stripe";
 
 export async function buyCredits(credits: number) {
+
     const session = await auth();
     if (!session?.user?.id) {
         throw new Error("User not authenticated");
@@ -37,6 +38,6 @@ export async function buyCredits(credits: number) {
         success_url: `${process.env.BASE_URL}/dashboard/models`,
         cancel_url: `${process.env.BASE_URL}/dashboard/credits`
     });
-
+    
     return s.id;
 }
