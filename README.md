@@ -34,6 +34,9 @@ Experiment.AI is a full-stack application that allows users to interact with AI 
 
 **Payments**: Stripe integration for one-time payment and credit-based access.
 
+![image](https://github.com/user-attachments/assets/ae667858-7770-49f2-8a8b-8fb8d7f723f5)
+
+
 
 ## Features
 
