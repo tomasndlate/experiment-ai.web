@@ -10,7 +10,7 @@
      A full-stack machine learning application to interact with multiple models
     <br />
     <br />
-    <a href="https://ml-experiment-ai.vercel.app/"><strong>Explore Experiment.AI live »</strong></a>
+    <a href="https://experiment-ai-web.vercel.app/"><strong>Explore Experiment.AI live »</strong></a>
     <br />
   </p>
 </div>
